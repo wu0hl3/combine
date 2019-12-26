@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* FLEX */
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#all{
+    width: 80%;
+    margin: auto;
+}
+/* 頁首btn */
+#top-btn{
+    border: yellow 1px solid;
+    position: fixed;
+    right:10px;
+    bottom: 10px;
+    z-index: 10;
+}
+/* HEADER */
+header{
+    width:100%;
+}
+nav{
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+#logo{
+    width:70px;
+}
+#menu{
+    width: 50px;
+    margin:10px;
+    display: none;
+}
+.link-group{
+    margin-right:10px;
+}
+.link-target{
+    margin: 10px;
+}
+.link{
+    border: 1px solid black;
+    padding: 0 40px; 
+    text-decoration: none;
+}
+.link:hover{
+    color: white;
+}
+
+/* main */
+#main{
+    width: 100%;
+}
+/* 圖文 */
+section{
+    width: 100%;
+    /* height:100vh; */
+    padding: 20px 5vh 5vh 5vh;
+}
+#pic{
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-image:url("../images/cat1-1.jpg");
+    border:2px #ccc solid;
+}
+#pic:hover{
+    background-image: url("../images/cat1-2.jpg")
+}
+section p{
+    width: 40%;
+    height: 80%;
+    margin:0 0 0 20px ;
+    line-height: 30px;
+}
+/* parallax */
+#parallax{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("../images/catp.jpeg")
+    
+}
+.mask{
+    width: 100%;
+    height:100vh;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.377);
+}
+h1{
+    line-height: 50px;
+    border: 1px solid blue;
+    padding: 0 30px;
+}
+/* introduce */
+#developerintroduce{
+    width: 100%;
+    height: unset;
+    justify-content: space-evenly;
+}
+.container{
+    width: 30%;
+    /* height: 100vh; */
+    border: 2px solid black;
+}
+.int-pic{
+    width: 100%;
+    height: 200px;
+    border: 1px solid green;
+    background-size: cover;
+}
+.int-pic1{
+    background-image: url("../images/int1.jpg")
+}
+.int-pic2{
+    background-image: url("../images/int2.jpg")
+}
+.int-pic3{
+    background-image: url("../images/int3.jpg")
+}
+
+#developerintroduce p {
+    width: 100%;
+    height: calc(100% - 200px);
+    line-height: 20px;
+    text-align: justify;
+    margin: 0;
+    padding: 15px;
+}
+/* FOOTER */
+footer{
+    width: 100%;
+    text-align: center;
+    background-color: blue;
+}
+footer p{
+    line-height: 50px;
+    color: white;
+}
+
+@media screen and (max-width:990px){
+    #all{
+        width: 100%;
+    }
+    /* nav */
+    #logo{
+        display: none;
+    }
+    #menu{
+        width: 50px;
+        display: block;
+    }
+    #menu:hover +ul{
+        display: block;
+        position: absolute;
+    }
+    .link-group{
+        display:none;
+        background-color: blueviolet;
+        padding: 0px;
+    }
+    /* main */
+    /* imageandtext */
+
+    section{
+        height:100vh;
+        padding: 20px;
+        justify-content: flex-start;
+    }
+    
+    #imageandtext{
+        height: unset;
+        padding: 30px;
+        flex-flow: column;
+    }
+    #pic{
+        width: 100%;
+        height:300px;
+        background-size: cover;
+        order: 1;
+    }
+    section p{
+        width: 100%;
+        margin: 0 100px 100px 100px;
+        margin-bottom: 0;
+        line-height: 20px;
+    }
+    /* parallax */
+    h1{
+        display: none;
+    }
+    /* developerintroduce */
+    #developerintroduce{
+        flex-flow: column;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        border: 2px solid black;
+    }
+    .int-pic{
+        width: 100%;
+        height: 200px;
+        border: 1px solid green;
+        background-size: cover;
+    }
+
+    #developerintroduce p {
+        width: 100%;
+        line-height: 15px;
+        height: unset;
+    }
+
+}
